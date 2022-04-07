@@ -183,7 +183,7 @@ var Box = function Box(props) {
   console.log(props);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "box"
-  });
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, props.location));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Box);
