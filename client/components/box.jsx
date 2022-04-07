@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 
-const Box = () => {
+const Box = (props) => {
 
-const [style, setStyle] = useState({height: '40px', width: '40px', backgroundColor: 'green'})
-
+// const [style, setStyle] = useState({})
+//test
+  console.log(props)
   return (
-    <div style={style}></div>
+    <div className="box"></div>
   )
 }
 

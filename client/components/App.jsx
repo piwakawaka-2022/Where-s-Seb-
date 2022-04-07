@@ -1,12 +1,19 @@
 
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Box from './Box'
+// import Box from './Box'
+import Board from './Board'
+import boxInfo from '../boxInfo'
+import FootballAudio from './Background-audio'
+
 
 
 function App() {
   return (
-      Array.from({length: 9}, (i) => <Box key={i} />)
+
+    <div className="container">
+      <Board boxes={boxInfo}/>
+     </div>
   )
 }
 
