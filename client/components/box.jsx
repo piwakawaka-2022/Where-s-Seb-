@@ -7,7 +7,9 @@ const Box = (props) => {
 //test
   console.log(props)
   return (
-    <div className="box"></div>
+    <div className="box">
+      <p className='location'>{props.location}</p>
+    </div>
   )
 }
 
