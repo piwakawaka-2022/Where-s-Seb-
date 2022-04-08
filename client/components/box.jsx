@@ -20,8 +20,8 @@ function clickHandler(){
   } else {
     setFlippedState('isFlipped')
   }
-  console.log(flippedState)
-  console.log(props)
+  // console.log(flippedState)
+  // console.log(props)
 }
 
   // console.log(props)
