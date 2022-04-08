@@ -2,35 +2,123 @@ body {
   background-image: url('./images/fotballbane.jpeg');
 }
 
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    background: linear-gradient(to top, rgba(255, 0, 0, 0.7) 50%, transparent 20%);
+    border-radius: 20px;
+    margin: 40px 20px;
+}
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  column-gap: 10px;
-  row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 100%;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px;
-  justify-items: center;
-  max-height: 50vh;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    justify-items: center;
+    max-height: 50vh;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .box {
-  margin: 10px;
-  height: 180px;
-  width: 180px;
-  /* background-color: white; */
-  border-radius: 20px;
+    display: flex;
+    height: 180px;
+    width: 180px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.location {
+    font-family: monospace;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.notFlipped:hover {
+    color: white;
+    background: rgba(255, 0, 0, 0.7)
 }
 
 .isFlipped {
-  background-color: aqua;
+    visibility: hidden;
 }
 
 .notFlipped {
-  background-color: brown;
+  background-color: white
 }
+
+.button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button button {
+    color: white;
+    margin-left: 20px;
+    font-family: monospace;
+    font-size: large;
+    background: rgba(255, 0, 0, 0.427);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: rgba(255, 0, 0, 1);
+    animation: bounce .8s;
+    
+}
+
+.buttons {
+  display:flex;
+  flex: row;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+/* animation for buttons */
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+
+
