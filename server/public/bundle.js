@@ -124,7 +124,7 @@ function Board(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "grid"
   }, props.boxes.map(function (box) {
-    console.log(box);
+    // console.log(box)
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
       id: box.id,
       key: box.id,
@@ -170,18 +170,33 @@ var Box = function Box(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState2 = _slicedToArray(_useState, 2),
       isFlipped = _useState2[0],
-      setIsFlipped = _useState2[1]; //useState re-renders the page when we click
+      setIsFlipped = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+      _useState4 = _slicedToArray(_useState3, 2),
+      flippedState = _useState4[0],
+      setFlippedState = _useState4[1]; //useState re-renders the page when we click
   //setIsFlipped sets the isFlipped variable and triggers the re-render
+  // console.log(props)
 
 
   function clickHandler() {
-    setIsFlipped(true);
+    setIsFlipped(true); // let flippedState
+
+    if (props.isSeb === true) {
+      setFlippedState('isSeb');
+    } else {
+      setFlippedState('isFlipped');
+    }
+
+    console.log(flippedState);
+    console.log(props);
   } // console.log(props)
 
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     onClick: clickHandler,
-    className: "box ".concat(isFlipped ? 'isFlipped' : 'notFlipped')
+    className: "box ".concat(isFlipped ? flippedState : 'notFlipped')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "location"
   }, !isFlipped && props.location));
