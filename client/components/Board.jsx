@@ -11,7 +11,7 @@ function Board(props) {
     <>
       <div className="grid">
         {props.boxes.map((box) => {
-          console.log(box)
+          // console.log(box)
           return(
             <Box
             id={box.id}
