@@ -73,8 +73,8 @@ body {
 }
 
 .isSeb {
-  background-color: green;
-}
+  background-image: url('./images/Screen\ Shot\ 2022-04-07\ at\ 3.59.40\ PM.png');
+  background-size: 180px;}
 
 .button {
   align-items: center;

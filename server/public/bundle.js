@@ -233,6 +233,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function FootballAudio() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('paused'),
+      _useState2 = _slicedToArray(_useState, 2),
+      audioState = _useState2[0],
+      setAudioState = _useState2[1];
+
   var audio = new Audio("/audio/football-sounds.mp3");
 
   var start = function start() {
@@ -244,11 +249,6 @@ function FootballAudio() {
     audio.pause();
     setAudioState('paused');
   };
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('paused'),
-      _useState2 = _slicedToArray(_useState, 2),
-      audioState = _useState2[0],
-      setAudioState = _useState2[1];
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "button"
