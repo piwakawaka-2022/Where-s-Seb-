@@ -9,6 +9,12 @@ import Refresh from './Refresh'
 
 
 function App() {
+  const sebLoc = Math.ceil(Math.random()*boxInfo.length)
+  boxInfo.find(box => {
+    if (box.id == sebLoc) 
+      box.isSeb = true
+  })
+
   return (
       <>
     <div className="header">
@@ -23,6 +29,7 @@ function App() {
       <Board boxes={boxInfo}/>
         
      </div>
+    
      </>
   )
 }

@@ -19,13 +19,13 @@ __webpack_require__.r(__webpack_exports__);
   isFlipped: false
 }, {
   id: 2,
-  location: "Schmoozing in the corporate boxes",
+  location: 'Schmoozing in the corporate boxes',
   isSeb: false,
   isFlipped: false
 }, {
   id: 3,
-  location: 'Getting Theirry\'s autograph',
-  isSeb: true,
+  location: "Getting Theirry's autograph",
+  isSeb: false,
   isFlipped: false
 }, {
   id: 4,
@@ -86,6 +86,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
+  var sebLoc = Math.ceil(Math.random() * _boxInfo__WEBPACK_IMPORTED_MODULE_2__["default"].length);
+  _boxInfo__WEBPACK_IMPORTED_MODULE_2__["default"].find(function (box) {
+    if (box.id == sebLoc) box.isSeb = true;
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Where is Seb?!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -187,10 +191,9 @@ var Box = function Box(props) {
       setFlippedState('isSeb');
     } else {
       setFlippedState('isFlipped');
-    }
+    } // console.log(flippedState)
+    // console.log(props)
 
-    console.log(flippedState);
-    console.log(props);
   } // console.log(props)
 
 
